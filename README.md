@@ -1,6 +1,6 @@
 # Dify Knowledge Base Importer
 
-一个用于便捷导入内容到 Dify Workflow 的 Chrome 扩展。支持多种输入方式，可以轻松地将网页内容、文本或文件导入到指定的 Dify Workflow 中进行后续处理。
+一个用于便捷导入内容到 Dify Workflow 的 Chrome 扩展。支持多种输入方式，可以轻松地将网页内容、文本或文件导入到指定的 Dify Workflow 中进行后续处理。注意，该插件并不能安装后马上使用，需要搭配你自己所配置的 dify workflow，需要一定的动手能力（但都是基于 dify 的图形化编程）。
 
 ## 功能特点
 
