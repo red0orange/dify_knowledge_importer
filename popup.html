@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Settings Section -->
+        <div class="collapsible">
+            <div class="collapsible-header" data-target="settings-content">
+                <span>API Settings</span>
+                <span class="arrow">▼</span>
+            </div>
+            <div id="settings-content" class="collapsible-content hidden">
+                <div class="settings-section">
+                    <div class="settings-group">
+                        <label class="settings-label">API URL</label>
+                        <input type="text" id="apiUrl" placeholder="Enter API URL" class="input-field">
+                    </div>
+                    <div class="settings-group">
+                        <label class="settings-label">API Key</label>
+                        <input type="text" id="apiKey" placeholder="Enter API Key" class="input-field">
+                    </div>
+                    <div class="button-group">
+                        <button id="saveSettings" class="button primary">Save Settings</button>
+                        <button id="clearSettings" class="button secondary">Clear Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Import Methods Section -->
+        <div class="import-section">
+            <!-- Quick Import -->
+            <div class="import-method">
+                <h3 class="method-title">Quick Import</h3>
+                <button id="importCurrentPage" class="button primary full-width">Import Current Page</button>
+            </div>
+
+            <!-- Text Input -->
+            <div class="import-method">
+                <h3 class="method-title">Manual Input</h3>
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Title (optional)" class="input-field">
+                    <div class="content-input-wrapper">
+                        <select id="contentType" class="select-field integrated">
+                            <optgroup label="Text">
+                                <option value="text">Plain Text</option>
+                                <option value="markdown">Markdown</option>
+                            </optgroup>
+                            <optgroup label="Code">
+                                <option value="code">Python</option>
+                                <option value="code">JavaScript</option>
+                                <option value="code">Java</option>
+                                <option value="code">C++</option>
+                                <option value="code">Go</option>
+                                <option value="code">Ruby</option>
+                                <option value="code">PHP</option>
+                                <option value="code">Swift</option>
+                                <option value="code">Rust</option>
+                                <option value="code">SQL</option>
+                            </optgroup>
+                            <optgroup label="Data">
+                                <option value="text">JSON</option>
+                                <option value="text">YAML</option>
+                                <option value="text">XML</option>
+                                <option value="text">CSV</option>
+                            </optgroup>
+                        </select>
+                        <textarea id="content" placeholder="Enter your content here..." class="textarea-field integrated"></textarea>
+                    </div>
+                    <button id="submitContent" class="button primary full-width">Submit Content</button>
+                </div>
+            </div>
+
+            <!-- File Upload -->
+            <div class="import-method">
+                <h3 class="method-title">File Upload</h3>
+                <div class="file-upload-group">
+                    <label for="fileInput" class="file-label">Choose File</label>
+                    <input type="file" id="fileInput" class="file-input">
+                    <button id="uploadFile" class="button primary full-width">Upload File</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Response Section -->
+        <div class="collapsible">
+            <div class="collapsible-header" data-target="response-content">
+                <span>Response Log</span>
+                <span class="arrow">▼</span>
+            </div>
+            <div id="response-content" class="collapsible-content hidden">
+                <div class="response-section">
+                    <div class="response-header">
+                        <button id="clearLog" class="button small">Clear</button>
+                    </div>
+                    <div id="responseLog" class="response-log"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 

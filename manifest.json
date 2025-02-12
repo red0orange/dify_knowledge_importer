@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Dify Knowledge Base Importer",
+  "version": "1.1",
+  "description": "Import content to Dify knowledge base",
+  "icons": {
+    "16": "images/import-16.png",
+    "48": "images/import-48.png",
+    "128": "images/import-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/import-16.png",
+      "48": "images/import-48.png",
+      "128": "images/import-128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://123.249.40.236/*"
+  ]
+} 

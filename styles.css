@@ -1,0 +1,369 @@
+/* 基础样式 */
+body {
+    width: 400px;
+    padding: 16px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f5f7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 输入字段样式 */
+.input-field, .select-field, .textarea-field {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.input-field:focus, .select-field:focus, .textarea-field:focus {
+    outline: none;
+    border-color: #007AFF;
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.1);
+}
+
+.textarea-field {
+    height: 80px;
+    resize: none;
+    margin: 8px 0;
+}
+
+/* 按钮样式 */
+.button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button.primary {
+    background-color: #007AFF;
+    color: white;
+}
+
+.button.primary:hover {
+    background-color: #0056b3;
+}
+
+.button.secondary {
+    background-color: #6B7280;
+    color: white;
+}
+
+.button.secondary:hover {
+    background-color: #4B5563;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.button.full-width {
+    width: 100%;
+    margin: 4px 0;
+}
+
+.button.small {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* 导入方法区域样式 */
+.import-section {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.import-method {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.import-method:last-child {
+    border-bottom: none;
+}
+
+.method-title {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    color: #1a1a1a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 添加图标前缀增加视觉效果 */
+.method-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #007AFF;
+    border-radius: 50%;
+}
+
+/* 文件上传样式 */
+.file-upload-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f5f5f7;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.file-input {
+    display: none;
+}
+
+/* 设置区域样式 */
+.settings-section {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.settings-group {
+    margin-bottom: 8px;
+}
+
+.settings-label {
+    display: block;
+    margin-bottom: 3px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* 响应日志样式 */
+.response-section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.response-log {
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 6px;
+    height: 100px;
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
+/* 折叠面板样式 */
+.collapsible {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.collapsible-header {
+    padding: 10px 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    background-color: white;
+}
+
+.collapsible-header:hover {
+    background-color: #f8f9fa;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.collapsible-content.hidden {
+    max-height: 0;
+}
+
+.collapsible-content:not(.hidden) {
+    max-height: 500px;
+}
+
+/* 状态提示样式 */
+.status {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.95;
+    transition: all 0.3s ease;
+}
+
+.status.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.status.pending {
+    background-color: #fff7ed;
+    color: #9a3412;
+}
+
+/* 其他辅助样式 */
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tasks-section {
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.task-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.task-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.task-status {
+    font-size: 12px;
+    color: #666;
+}
+
+.task-status.pending {
+    color: #f59e0b;
+}
+
+.task-status.success {
+    color: #10b981;
+}
+
+.task-status.error {
+    color: #ef4444;
+}
+
+/* 内容输入区域样式 */
+.content-input-wrapper {
+    position: relative;
+    margin: 6px 0;
+}
+
+.select-field.integrated {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    padding: 4px 20px 4px 10px;
+    border-radius: 0 8px 0 0;
+    background-color: #f5f5f7;
+    border: none;
+    font-size: 11px;
+    color: #666;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.select-field.integrated:focus {
+    outline: none;
+    background-color: #e5e7eb;
+}
+
+.textarea-field.integrated {
+    padding-top: 32px;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: 100px;
+}
+
+/* 优化下拉选择框样式 */
+optgroup {
+    font-weight: 600;
+    color: #374151;
+}
+
+option {
+    font-weight: normal;
+    color: #666;
+    padding: 4px 8px;
+}
+
+/* 自定义下拉箭头 */
+.select-field.integrated {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5l3 3 3-3'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+/* 优化悬停效果 */
+.select-field.integrated:hover {
+    background-color: #e5e7eb;
+}
+
+/* 确保文本域获得焦点时显示在选择框上方 */
+.textarea-field.integrated:focus {
+    position: relative;
+    z-index: 2;
+} 
