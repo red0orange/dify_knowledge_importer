@@ -3,7 +3,7 @@
 一个用于便捷导入内容到 Dify Workflow 的 Chrome 扩展。支持多种输入方式，可以轻松地将网页内容、文本或文件导入到指定的 Dify Workflow 中进行后续处理。注意，该插件并不能安装后马上使用，需要搭配你自己所配置的 dify workflow，需要一定的动手能力（但都是基于 dify 的图形化编程）。
 
 Demo 视频：
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113989036020182&bvid=BV1sgKGejEaT&cid=28347467912&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+![Demo 视频](https://www.bilibili.com/video/BV1sgKGejEaT)
 
 ## 功能特点
 
